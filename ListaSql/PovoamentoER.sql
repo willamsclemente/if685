@@ -1,0 +1,66 @@
+INSERT INTO Projeto (codigo, descricao, valor) VALUES (1, 'Projeto 1', 5000.00);
+INSERT INTO Projeto (codigo, descricao, valor) VALUES (2, 'Projeto 2', 9600.00);
+INSERT INTO Projeto (codigo, descricao, valor) VALUES (3, 'Projeto 3', 7500.00);
+INSERT INTO Projeto (codigo, descricao, valor) VALUES (4, 'Projeto 4', 15000.00);
+INSERT INTO Projeto (codigo, descricao, valor) VALUES (5, 'Projeto 5', 3200.00);
+
+INSERT INTO atividade (codigo, descricao) VALUES (1, 'Monitoramento');
+INSERT INTO atividade (codigo, descricao) VALUES (2, 'Gestão');
+INSERT INTO atividade (codigo, descricao) VALUES (3, 'Desenvolvimento');
+INSERT INTO atividade (codigo, descricao) VALUES (4, 'Pesquisa');
+INSERT INTO atividade (codigo, descricao) VALUES (5, 'Marketing');
+
+INSERT INTO empregado (cpf, cpf_lider, nome, dt_nasc, sexo, salario) VALUES (1111, NULL, 'Fulano de Cicrano e Beltrano Jr.', to_date ('21/02/1980', 'dd/mm/yyyy'), 'M', 5000.00);
+INSERT INTO empregado (cpf, cpf_lider, nome, dt_nasc, sexo, salario) VALUES (2222, 1111, 'Marco Aurelio', to_date ('15/05/1987', 'dd/mm/yyyy'), 'M', 3500.00);
+INSERT INTO empregado (cpf, cpf_lider, nome, dt_nasc, sexo, salario) VALUES (3333, 1111, 'Josefa Paes Cicrano', to_date ('23/11/1990', 'dd/mm/yyyy'), 'F', 4000.00);
+INSERT INTO empregado (cpf, cpf_lider, nome, dt_nasc, sexo, salario) VALUES (4444, 3333, 'Dario Marques', to_date ('05/06/1992', 'dd/mm/yyyy'), 'M', 2000.00);
+INSERT INTO empregado (cpf, cpf_lider, nome, dt_nasc, sexo, salario) VALUES (5555, 3333, 'Lidia Cicrano Gomes', to_date ('13/07/1989', 'dd/mm/yyyy'), 'F', 2500.00);
+INSERT INTO empregado (cpf, cpf_lider, nome, dt_nasc, sexo, salario) VALUES (6666, 1111, 'Joaquim Carvalho', to_date ('28/04/1983', 'dd/mm/yyyy'), 'M', 4500.00);
+INSERT INTO empregado (cpf, cpf_lider, nome, dt_nasc, sexo, salario) VALUES (7777, 6666, 'Paloma Morais', to_date ('05/12/1990', 'dd/mm/yyyy'), 'F', 3500.00);
+INSERT INTO empregado (cpf, cpf_lider, nome, dt_nasc, sexo, salario) VALUES (8888, 3333, 'Gustavo Marques Cicrano', to_date ('21/12/1985', 'dd/mm/yyyy'), 'M', 3500.00);
+INSERT INTO empregado (cpf, cpf_lider, nome, dt_nasc, sexo, salario) VALUES (9999, 1111, 'Carol Albuquerque', to_date ('17/10/1994', 'dd/mm/yyyy'), 'F', 3500.00);
+INSERT INTO empregado (cpf, cpf_lider, nome, dt_nasc, sexo, salario) VALUES (0000, NULL, 'Leticia Gouveia', to_date ('08/05/1990', 'dd/mm/yyyy'), 'F', 3500.00);
+INSERT INTO empregado (cpf, cpf_lider, nome, dt_nasc, sexo, salario) VALUES (9875, 0000, 'Ricardo Cicrano Teodoro', to_date ('15/01/1988', 'dd/mm/yyyy'), 'M', 3500.00);
+INSERT INTO empregado (cpf, cpf_lider, nome, dt_nasc, sexo, salario) VALUES (6542, 6666, 'Fulano de Cicrano e Beltrano', to_date ('07/08/1982', 'dd/mm/yyyy'), 'M', 3500.00);
+INSERT INTO empregado (cpf, cpf_lider, nome, dt_nasc, sexo, salario) VALUES (1123, NULL, 'Valkiria Diebretch', to_date ('16/12/1987', 'dd/mm/yyyy'), 'F', 5000.00);
+INSERT INTO empregado (cpf, cpf_lider, nome, dt_nasc, sexo, salario) VALUES (5813, 1123, 'Dean Flugel', to_date ('30/04/1992', 'dd/mm/yyyy'), 'M', 3000.00);
+INSERT INTO empregado (cpf, cpf_lider, nome, dt_nasc, sexo, salario) VALUES (2134, 0000, 'Kaira Vermillion', to_date ('19/03/1986', 'dd/mm/yyyy'), 'F', 3255.00);
+
+INSERT INTO departamento (cpf_chefe, codigo, descricao) VALUES (1111, 1, 'Vendas');
+INSERT INTO departamento (cpf_chefe, codigo, descricao) VALUES (3333, 2, 'Producao');
+INSERT INTO departamento (cpf_chefe, codigo, descricao) VALUES (0000, 3, 'RH');
+INSERT INTO departamento (cpf_chefe, codigo, descricao) VALUES (1123, 4, 'Financeiro');
+INSERT INTO departamento (cpf_chefe, codigo, descricao) VALUES (6542, 5, 'Estoque');
+
+INSERT INTO participa (codigo_projeto, codigo_atividade, cpf) VALUES (2, 1, 1111);
+INSERT INTO participa (codigo_projeto, codigo_atividade, cpf) VALUES (2, 3, 7777);
+INSERT INTO participa (codigo_projeto, codigo_atividade, cpf) VALUES (2, 5, 6666);
+INSERT INTO participa (codigo_projeto, codigo_atividade, cpf) VALUES (2, 4, 5555);
+INSERT INTO participa (codigo_projeto, codigo_atividade, cpf) VALUES (2, 4, 6666);
+INSERT INTO participa (codigo_projeto, codigo_atividade, cpf) VALUES (3, 2, 4444);
+INSERT INTO participa (codigo_projeto, codigo_atividade, cpf) VALUES (3, 3, 8888);
+INSERT INTO participa (codigo_projeto, codigo_atividade, cpf) VALUES (3, 5, 6666);
+INSERT INTO participa (codigo_projeto, codigo_atividade, cpf) VALUES (3, 4, 7777);
+INSERT INTO participa (codigo_projeto, codigo_atividade, cpf) VALUES (4, 2, 0000);
+INSERT INTO participa (codigo_projeto, codigo_atividade, cpf) VALUES (4, 3, 9999);
+INSERT INTO participa (codigo_projeto, codigo_atividade, cpf) VALUES (4, 1, 2222);
+INSERT INTO participa (codigo_projeto, codigo_atividade, cpf) VALUES (5, 1, 0000);
+INSERT INTO participa (codigo_projeto, codigo_atividade, cpf) VALUES (5, 4, 9875);
+INSERT INTO participa (codigo_projeto, codigo_atividade, cpf) VALUES (5, 2, 6542);
+
+INSERT INTO trabalha (cpf, codigo_depto, data_trabalha) VALUES (1111, 1, to_date ('01/02/1999', 'dd/mm/yyyy'));
+INSERT INTO trabalha (cpf, codigo_depto, data_trabalha) VALUES (2222, 1, to_date ('04/07/2001', 'dd/mm/yyyy'));
+INSERT INTO trabalha (cpf, codigo_depto, data_trabalha) VALUES (2222, 2, to_date ('01/09/2005', 'dd/mm/yyyy'));
+INSERT INTO trabalha (cpf, codigo_depto, data_trabalha) VALUES (3333, 2, to_date ('26/12/2009', 'dd/mm/yyyy'));
+INSERT INTO trabalha (cpf, codigo_depto, data_trabalha) VALUES (4444, 4, to_date ('13/05/2010', 'dd/mm/yyyy'));
+INSERT INTO trabalha (cpf, codigo_depto, data_trabalha) VALUES (5555, 3, to_date ('28/05/2011', 'dd/mm/yyyy'));
+INSERT INTO trabalha (cpf, codigo_depto, data_trabalha) VALUES (6666, 1, to_date ('09/02/2005', 'dd/mm/yyyy'));
+INSERT INTO trabalha (cpf, codigo_depto, data_trabalha) VALUES (6666, 2, to_date ('01/02/2009', 'dd/mm/yyyy'));
+INSERT INTO trabalha (cpf, codigo_depto, data_trabalha) VALUES (6666, 4, to_date ('18/11/2013', 'dd/mm/yyyy'));
+INSERT INTO trabalha (cpf, codigo_depto, data_trabalha) VALUES (8888, 2, to_date ('20/06/2011', 'dd/mm/yyyy'));
+INSERT INTO trabalha (cpf, codigo_depto, data_trabalha) VALUES (9999, 1, to_date ('05/05/2005', 'dd/mm/yyyy'));
+INSERT INTO trabalha (cpf, codigo_depto, data_trabalha) VALUES (9875, 4, to_date ('17/01/2013', 'dd/mm/yyyy'));
+INSERT INTO trabalha (cpf, codigo_depto, data_trabalha) VALUES (0000, 4, to_date ('01/04/2007', 'dd/mm/yyyy'));
+INSERT INTO trabalha (cpf, codigo_depto, data_trabalha) VALUES (6542, 3, to_date ('15/09/2010', 'dd/mm/yyyy'));
+INSERT INTO trabalha (cpf, codigo_depto, data_trabalha) VALUES (1123, 4, to_date ('12/06/2007', 'dd/mm/yyyy'));
+INSERT INTO trabalha (cpf, codigo_depto, data_trabalha) VALUES (2134, 3, to_date ('22/12/2012', 'dd/mm/yyyy'));

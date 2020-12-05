@@ -1,0 +1,29 @@
+SET SERVEROUTPUT ON
+ALTER TYPE tp_empregado
+ADD MEMBER FUNCTION getIdade RETURN NUMBER CASCADE;
+ALTER TYPE tp_empregado
+ADD MEMBER PROCEDURE printInfo CASCADE;
+CREATE OR REPLACE TYPE BODY tp_empregado AS
+MEMBER FUNCTION getIdade RETURN NUMBER IS
+BEGIN
+
+RETURN (TRUNC(SYSDATE - dt_nasc)/365);
+
+END;
+MEMBER PROCEDURE printInfo IS
+BEGIN
+DBMS_OUTPUT.PUT_LINE('Nome: ' || SELF.nome);
+DBMS_OUTPUT.PUT_LINE('Idade: ' || SELF.getIdade());
+DBMS_OUTPUT.PUT_LINE('Salario: ' || SELF.salario);
+END;
+END;
+/
+DECLARE
+emp tp_empregado;
+BEGIN
+SELECT DEREF (ref_chefe) INTO emp
+FROM tb_departamento
+WHERE codigo = 1;
+emp.printInfo();
+END;
+/
